@@ -1,1 +1,2 @@
 print("Mahasiswa")
+print("Mahasigma")
