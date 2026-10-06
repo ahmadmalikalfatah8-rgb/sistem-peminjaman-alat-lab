@@ -1,2 +1,1 @@
 print("Mahasiswa")
-print("Mahasigma")
