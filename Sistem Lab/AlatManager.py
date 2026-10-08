@@ -1,0 +1,1 @@
+from Alat import Alat, KONDISI_BAIK, KONDISI_VALID

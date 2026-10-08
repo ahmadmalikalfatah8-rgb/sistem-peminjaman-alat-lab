@@ -1,3 +1,5 @@
+from Alat import KONDISI_BAIK, KONDISI_RINGAN, KONDISI_BERAT
+
 class Transaksi:
     """Superclass / Base class untuk seluruh transaksi laboratorium."""
     def __init__(self, id_transaksi, nim, tanggal):
