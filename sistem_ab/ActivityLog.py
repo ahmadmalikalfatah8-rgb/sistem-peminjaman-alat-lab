@@ -1,6 +1,8 @@
+from datetime import datetime
+
 class ActivityLog:
     def __init__(self):
-        self.entries = []  
+        self.entries = []  # list of {"waktu": str, "pesan": str}
 
     def catat(self, pesan):
         waktu = datetime.now().strftime("%Y-%m-%d %H:%M")
