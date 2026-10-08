@@ -1,11 +1,12 @@
-from ActivityLog import ActivityLog
-from MahasiswaManager import MahasiswaManager
-from AlatManager import AlatManager
-from TransaksiManager import TransaksiManager
-from Alat import KONDISI_BAIK
+from .ActivityLog import ActivityLog
+from .MahasiswaManager import MahasiswaManager
+from .AlatManager import AlatManager
+from .TransaksiManager import TransaksiManager
+from .Alat import KONDISI_BAIK
 
 class LabManager:
-    MAKS_TRANSAKSI_AKTIF = 2   
+    """Koordinator utama sistem laboratorium untuk aturan bisnis lintas domain."""
+    MAKS_TRANSAKSI_AKTIF = 2   # Aturan 2
     MAKS_HARI_PINJAM = 7
 
     def __init__(self):
@@ -51,7 +52,7 @@ class LabManager:
     def kembalikan_alat(self, id_trx, kode, kondisi, tanggal=None):
         trx, bukti_kembali = self.trx_mgr.catat_pengembalian(id_trx, kode, kondisi, tanggal)
         alat = self.alat_mgr.get(kode)
-        alat.kondisi = kondisi    
+        alat.kondisi = kondisi    # Aturan 5: hanya 'baik' yang jadi tersedia
         alat.status_alat = "tersedia" if kondisi == KONDISI_BAIK else "tidak tersedia"
         self.log.catat(f"{alat.nama} ({kode}) dikembalikan, kondisi {kondisi} [{bukti_kembali.id}]")
 

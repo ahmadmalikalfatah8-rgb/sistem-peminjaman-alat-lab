@@ -1,11 +1,5 @@
 from datetime import date
-
-from labmanager import LabManager
-
-
-# ======================================================================
-# MENU INTERAKTIF
-# ======================================================================
+from sistem_lab.LabManager import LabManager
 
 def input_angka(prompt, default=None):
     teks = input(prompt).strip()
