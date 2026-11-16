@@ -40,7 +40,7 @@ Sistem juga menerapkan aturan bisnis untuk menjaga konsistensi data. Mahasiswa y
 
 ## 4. Struktur Program
 
-Struktur direktori proyek disusun sebagai berikut:
+Struktur direktori proyek disusun sebagai berikut.
 
 ```text
 sistem-peminjaman-alat-lab/
